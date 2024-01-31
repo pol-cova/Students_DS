@@ -5,6 +5,23 @@
 #ifndef DS_STUDENT_STUDENTS_H
 #define DS_STUDENT_STUDENTS_H
 
+// Declarar estructura Address
+/*
+ * estado -> 20 chars
+ * ciudad -> 20 chars
+ * colonia -> 20 chars
+ * calle -> 20 chars
+ * numCasa -> int
+ */
+struct Address{
+    char estado[20];
+    char ciudad[20];
+    char colonia[20];
+    char calle[20];
+    int numCasa;
+};
+
+
 // Declarar la estructura estudiante
 /*
  * nombre -> 20 chars
@@ -19,6 +36,8 @@ struct Estudiante{
     char apellidoMaterno[20];
     int edad;
     float estatura;
+    // Llamamos la estructura
+    struct Address domicilio;
 };
 
 // Definir funciones para optimizar el proyecto

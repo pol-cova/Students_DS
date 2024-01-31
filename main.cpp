@@ -4,7 +4,6 @@
 
 #include <iostream>
 #include "students.h"
-#include "dos.h"
 using namespace std;
 
 int main() {
@@ -20,7 +19,7 @@ int main() {
         // Solicitamos el numero de estudiantes
         cout << "Ingrese el numero de estudiantes: ";
         cin >> numStudents;
-        // creamos el arreglo llamando a la funcion
+        // creamos el arreglo llamando a la funcion para ingresar datos
         Estudiante* estudiantes = registerStudents(numStudents);
         // Imprimimos el menu
         menu();
@@ -32,8 +31,6 @@ int main() {
             displayStudents(estudiantes, numStudents);
         }else if (userOption == 2){
 
-            // Limpiamos el arreglo y espacio de la memoria
-            freeStudentArray(estudiantes);
             // Salimos de la app
             app = false;
         }

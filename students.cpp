@@ -9,19 +9,19 @@ using namespace std;
 // Main header function
 // Esta funcion imprime un mensaje de bienvenida
 void mainHeader(){
-    cout << "-----------------------------" << endl;
+    cout << "----------------------------------" << endl;
     cout << "| Sistema de Registro de Alumnos |" << endl;
-    cout << "-----------------------------" << endl;
+    cout << "----------------------------------" << endl;
 }
 // Menu function
 // Esta funcion imprime un menu
 void menu(){
-    cout << "|---------------------------|" << endl;
-    cout << "|           MENU            |" << endl;
-    cout << "|---------------------------|" << endl;
-    cout << "[1] Ver alumnos registrados |" << endl;
-    cout << "[2] Salir                   |" << endl;
-    cout << "-----------------------------" << endl;
+    cout << "|--------------------------------|" << endl;
+    cout << "|              MENU              |" << endl;
+    cout << "|--------------------------------|" << endl;
+    cout << "[1] Ver alumnos registrados      |" << endl;
+    cout << "[2] Salir                        |" << endl;
+    cout << "----------------------------------" << endl;
 }
 // Obtener info del estudiante
 // Esta funcion simplifica la obtencion de informacion
@@ -38,6 +38,19 @@ void getStudentInfo(Estudiante& estudiante){
     cin >> estudiante.edad;
     cout << "Ingresa estatura del alumno: ";
     cin >> estudiante.estatura;
+    fflush(stdin);
+    cout << "---- Datos de domicilio ----" << endl;
+    cout << "Ingresa Estado donde vive: ";
+    cin.getline(estudiante.domicilio.estado, 20, '\n');
+    cout << "Ingresa Ciudad donde vive: ";
+    cin.getline(estudiante.domicilio.ciudad, 20, '\n');
+    cout << "Ingresa Colonia donde vive: ";
+    cin.getline(estudiante.domicilio.colonia, 20, '\n');
+    cout << "Ingresa Calle donde vive: ";
+    cin.getline(estudiante.domicilio.calle, 20, '\n');
+    cout << "Ingresa Numero de casa donde vive: ";
+    cin >> estudiante.domicilio.numCasa;
+
 }
 // Function para registrar alumnos
 /*
@@ -71,7 +84,13 @@ void displayStudents(const Estudiante* estudianteArray, int num_students){
         cout << "Apellido Materno: " << estudianteArray[i].apellidoMaterno << endl;
         cout << "Edad: " << estudianteArray[i].edad << endl;
         cout << "Estatura: " << estudianteArray[i].estatura <<endl;
-        cout << "-------------------" << endl;
+        cout << "-------- Domicilio del alumno -------- " << endl;
+        cout << "Estado: " << estudianteArray[i].domicilio.estado << endl;
+        cout << "Ciudad: " << estudianteArray[i].domicilio.ciudad << endl;
+        cout << "Colonia: " << estudianteArray[i].domicilio.colonia << endl;
+        cout << "Calle: " << estudianteArray[i].domicilio.calle << endl;
+        cout << "Numero de casa: " << estudianteArray[i].domicilio.numCasa <<endl;
+        cout << "--------------------------------------" << endl;
     }
 }
 // Clear array
