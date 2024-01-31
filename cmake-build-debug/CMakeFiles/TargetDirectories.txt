@@ -1,0 +1,3 @@
+/Users/paulcontreras/Documents/ds_student/cmake-build-debug/CMakeFiles/ds_student.dir
+/Users/paulcontreras/Documents/ds_student/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/paulcontreras/Documents/ds_student/cmake-build-debug/CMakeFiles/rebuild_cache.dir
